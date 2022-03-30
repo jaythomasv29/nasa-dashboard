@@ -7,22 +7,16 @@
   * Utilized promises to allows data model to be triggered upon startup and run asynchronously while parsing through the data
 
 ---
-
----
 ### Express
   * HTTP server created to pass express app with various router configurations
   * Routers are modular and are separated with `/planets` GET endpoint
   * Express MVC pattern allows for clear flow from Front end making a request on specific route -> Router -> Controller -> Model -> View cycle
   * Handling of CORS to whitelist specific using middleware
 ---
-
----
 ### React Front End
   * Front end of project built with create react app
   * Styling done with `ARWES` Futuristic Sci-Fi UI
   * Use of hooks, `.fetch` to retrieve data from backend
----
-
 ---
 ### Custom Scripts for Automation
   * Custom scripts to build optimized version of front end application
