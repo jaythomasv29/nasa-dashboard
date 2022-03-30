@@ -2,7 +2,7 @@ const http = require('http')
 
 const app = require('./app')
 
-const { loadPlanetData } = require('./models/planets.model')
+const { getAllPlanets } = require('./models/planets.model')
 
 const PORT = process.env.PORT || 8000;
 
@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 })
 
 async function startServer() {
-  await loadPlanetData()
+  await getAllPlanets()
 }
 startServer()
 server.listen(PORT, () => {
