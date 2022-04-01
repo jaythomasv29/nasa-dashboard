@@ -22,7 +22,17 @@
 ### HTTP Routes
   * `/planets` GET Request: Gets all planets through API GET request from Express server
   * `/launches` GET Request: Gets all NASA launch data through API GET request from Express server
-  * `/launches` POST Request (Add launches) Add launch data from `req.body` through API POST request to add user submitted data to data model using a function controller.
+  * `/launches` POST Request (Add launches): Add launch data from `req.body` through API POST request to add user submitted data to data model using a function controller.
+  * `launches/:id` DELETE Request: Delete specific launch by launch ID using `req.params` to get from Front end. The API route triggers a controller function which then 
+  ```
+    await fetch(`${API_URL}/launches`, {
+    method: 'POST',
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify(launch),
+  }) 
+  ```
+
+---
 ### Custom Scripts for Automation
   * Custom scripts to build optimized version of front end application
   * `npm run deploy` effectively triggers client to build && once complete triggers server to start to serve the files on the same port in public folder on backend
